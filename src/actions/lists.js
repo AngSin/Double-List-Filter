@@ -1,17 +1,14 @@
-export const sendToFirst = (item, index) => {
-  console.log('adding to first list: ', item);
-  return {
-    type: 'sendToFirst',
-    item,
-    index
-  }
-}
+export const SEND_TO_FIRST = 'SEND_TO_FIRST';
+export const SEND_TO_SECOND = 'SEND_TO_SECOND';
 
-export const sendToSecond = (item, index) => {
-  console.log('adding to second list: ', item);
-  return {
-    type: 'sendToSecond',
-    item,
-    index
-  }
-}
+export const sendToFirst = (item, index) => ({
+  type: SEND_TO_FIRST,
+  item,
+  index
+});
+
+export const sendToSecond = (item, index) => ({
+  type: SEND_TO_SECOND,
+  item,
+  index
+});

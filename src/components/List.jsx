@@ -9,9 +9,8 @@ export default class List extends Component {
   }
 
   render() {
-    console.log('props:', this.props )
     //filter out the list items while ignoring case.
-    let itemsList = this.state.itemsList.slice(0).filter(item => item.toLowerCase().startsWith(this.state.searchTerm.toLowerCase()));
+    let itemsList = this.state.itemsList.slice(0).filter(item => item.toLowerCase().includes(this.state.searchTerm.toLowerCase()));
     const renderItems = itemsList.map((item,index) => {
       return (
         <li

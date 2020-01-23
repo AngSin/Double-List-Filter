@@ -18,6 +18,7 @@ body {
   color: var(--off-white);
   text-align: center;
   font-size: var(--header-font);
+  padding: 20px 0;
 }
 #header img {
   margin: 1%;

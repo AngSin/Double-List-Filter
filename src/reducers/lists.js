@@ -1,25 +1,27 @@
+import { SEND_TO_FIRST, SEND_TO_SECOND } from '../actions/lists';
+
 const initialState = {
   listOne: ['The Rolling Stones','The Doors','Led Zeppelin','Arctic Monkeys',
   'The Yardbirds','Aerosmith','The Who','Deep Purple',
   'The Jimi Hendrix Experience','The Kinks','The Byrds','Cream','The Police',
-  'The Clash','Dr Dre','Cee-Lo'],
+  'The Clash','Dr Dre','50 Cent'],
   //
-  listTwo: ['Nirvana','Black Sabbath','Pearl Jam','Radiohead','Blondie',
+  listTwo: ['Pav Dharia','Black Sabbath','Pearl Jam','Radiohead','Blondie',
   'Band of Gypsies','AC/DC','Boston','Jefferson Airplane','Blind Faith',
-  'Bob Dylan','Prince','Rodriguez','B.B. King','Jack Johnson','Pink Floyd']
-}
+  'Bob Dylan','Prince','Rodriguez','B.B. King','Kanye West','Pink Floyd']
+};
 
 export default(state = initialState, action) => {
-  let newState = {...state}
+  let newState = { ...state };
   switch(action.type) {
-    case 'sendToFirst': {
+    case SEND_TO_FIRST: {
       newState.listOne.splice(action.index,1);
-      newState.listTwo.push(action.item)
+      newState.listTwo.push(action.item);
       break;
     }
-    case 'sendToSecond': {
+    case SEND_TO_SECOND: {
       newState.listTwo.splice(action.index,1);
-      newState.listOne.push(action.item)
+      newState.listOne.push(action.item);
       break;
     }
     default:
