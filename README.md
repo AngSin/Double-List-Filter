@@ -1,3 +1,5 @@
 Made using create-react-app and uses bootstrap.
-        npm i
-        npm start
+```
+npm i
+npm start
+```
