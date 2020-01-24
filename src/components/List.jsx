@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 
 export default class List extends Component {
-  state = { itemsList: [], searchTerm: '' };
-
-  componentDidMount() {
-    let { itemsList } = this.props;
-    this.setState({ itemsList })
+  constructor(props) {
+    super(props);
+    this.state = { itemsList: props.itemsList, searchTerm: '' };
   }
 
   render() {
